@@ -3,6 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var dotenv = require("dotenv");
+
+dotenv.load();
+
+// test settings 
+var { getSettings } = require("./api/settings");
+getSettings()
+
 
 var postComment = require('./routes/comment')
 
